@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currency converter with a graph</title>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="graph-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="inputContainer">
+            <select id="changeLeft" class="custom-select">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+            <input id="leftValue" type="text" inputmode="decimal" value="100"/>        
+            <img id="exchangeValues" src="arrow.svg" />
+            <input id="rightValue" type="text" inputmode="decimal"/>
+            <select id="changeRight" class="custom-select">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+            </select>
+            <select id="period" class="custom-select">
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
+            </select>
+        </div>
+    </div>
+    <div class="footer">Powered by chart.js & exchangeratesapi.io</div>
+</body>
+</html>
